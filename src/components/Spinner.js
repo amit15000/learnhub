@@ -2,13 +2,11 @@ import React from "react";
 import "./Spinner.css";
 function Spinner() {
   return (
-    <div>
-      <div className="spinner">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
+    <div className="flex flex-col items-center space-y-2">
+      <div className="spinner"></div>
+      <p className="  text-blue-950 marker:text-lg font-semibold  ">
+        Loading...
+      </p>
     </div>
   );
 }
