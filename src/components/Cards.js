@@ -2,17 +2,22 @@ import React, { useState } from "react";
 import Card from "./Card";
 
 function Cards(props) {
+  const category = props.category;
   let courses = props.courses;
   const [likedCourses, setLikedCourses] = useState([]);
   const getCourses = () => {
-    let allCourses = [];
-    Object.values(courses).forEach((courseCategory) => {
-      // console.log(courseCategory);
-      courseCategory.forEach((courseData) => {
-        allCourses.push(courseData);
+    if (category === "All") {
+      let allCourses = [];
+      Object.values(courses).forEach((courseCategory) => {
+        // console.log(courseCategory);
+        courseCategory.forEach((courseData) => {
+          allCourses.push(courseData);
+        });
       });
-    });
-    return allCourses;
+      return allCourses;
+    } else {
+      return courses[category];
+    }
   };
   getCourses();
   return (
