@@ -2,6 +2,7 @@ import React from "react";
 import Card from "./Card";
 
 function Cards({ courses }) {
+  console.log(courses);
   const getCourses = () => {
     if (!courses || typeof courses !== "object") {
       // Handle the case where courses is undefined or not an object
