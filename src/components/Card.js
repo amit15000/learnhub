@@ -1,7 +1,9 @@
 import React from "react";
 import { FcLike } from "react-icons/fc";
 
-function Card({ course }) {
+const Card = (props) => {
+  let course = props.course;
+
   return (
     <div>
       <div>
@@ -16,6 +18,6 @@ function Card({ course }) {
       </div>
     </div>
   );
-}
+};
 
 export default Card;

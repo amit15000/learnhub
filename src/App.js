@@ -15,7 +15,7 @@ function App() {
     try {
       let res = await fetch(apiUrl);
       let output = await res.json();
-      setCourses(output);
+      setCourses(output.data);
     } catch (error) {
       toast.error("Network mein dikkat hai");
     }
@@ -33,7 +33,7 @@ function App() {
       <div>
         <Filter filterData={filterData} />
       </div>
-      <div>{loading ? <Spinner /> : courses && <Cards />}</div>
+      <div>{loading ? <Spinner /> : <Cards courses={courses} />}</div>
     </div>
   );
 }
