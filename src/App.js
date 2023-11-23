@@ -27,11 +27,11 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col bg-slate-400">
+    <div className="min-h-screen flex flex-col bg-slate-600">
       <div>
         <Navbar />
       </div>
-      <div className="bg-slate-600">
+      <div>
         <div className="mt-[.5rem] mb-[1rem]">
           <Filter
             filterData={filterData}
